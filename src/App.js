@@ -19,9 +19,9 @@ function App() {
 
   return (
     <div className="container">
-      {movies.length && movies.map(movie => {
+      {movies.length ? movies.map(movie => {
         return <Movie key={movie.id} {...movie} />
-      })}
+      }) : ''}
     </div>
   );
 }
