@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Movie from'./components/Movie';
 
+import './App.css';
+
 const API_KEY = 'f29cbeafe556227a999c9277467da814';
 const API_URL = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${API_KEY}&page=1`;
-const API_IMG = 'https://image.tmdb.org/t/p/w1280';
 const SEARCH = `https://api.themoviedb.org/3/search?&api_key=${API_KEY}`;
 
 function App() {
@@ -17,9 +18,9 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
+    <div className="container">
       {movies.length && movies.map(movie => {
-        return <Movie />
+        return <Movie key={movie.id} {...movie} />
       })}
     </div>
   );
