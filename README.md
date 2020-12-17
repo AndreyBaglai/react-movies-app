@@ -1,3 +1,3 @@
-# Simple movie application created with React.js.
+Simple movie application created with React.js.
 
-[Link](https://andreybaglai.github.io/react-movies-app/)
+[Movie app](https://andreybaglai.github.io/react-movies-app/)
